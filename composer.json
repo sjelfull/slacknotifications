@@ -1,0 +1,14 @@
+{
+	"name": "sjelfull/slacknotifications",
+	"description": "Send notifications to Slack when someone places an order, a entry is created,  or something else happens.",
+	"type": "craft-plugin",
+	"authors": [
+		{
+			"name": "Superbig",
+			"homepage": "https://superbig.co"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}
