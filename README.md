@@ -2,17 +2,15 @@
 
 Send notifications to Slack when someone places an order, a entry is created,  or something else happens.
 
-![Screenshot](resources/screenshots/plugin_logo.png)
+![Screenshot](resources/icon.png)
 
 ## Installation
 
 To install Slack Notifications, follow these steps:
 
 1. Download & unzip the file and place the `slacknotifications` directory into your `craft/plugins` directory
-2.  -OR- do a `git clone https://github.com/sjelfull/slacknotifications.git` directly into your `craft/plugins` folder.  You can then update it with `git pull`
-3.  -OR- install with Composer via `composer require sjelfull/slacknotifications`
-4. Install plugin in the Craft Control Panel under Settings > Plugins
-5. The plugin folder should be named `slacknotifications` for Craft to see it.  GitHub recently started appending `-master` (the branch name) to the name of the folder for zip file downloads.
+2. Install plugin in the Craft Control Panel under Settings > Plugins
+3. The plugin folder should be named `slacknotifications` for Craft to see it.
 
 Slack Notifications works on Craft 2.4.x and Craft 2.5.x.
 
