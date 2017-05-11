@@ -22,4 +22,12 @@ Then, copy the example config file `slacknotifications.php` into your config dir
 
 Then, modify your config and add your events.
 
+## Sending a message from templates
+
+You can also send messages from a template:
+
+```twig
+{{ craft.slackNotifications.send('Message from Craft') }}
+```
+
 Brought to you by [Superbig](https://superbig.co)
