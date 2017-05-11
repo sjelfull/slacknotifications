@@ -1,7 +1,10 @@
 <?php
 return [
-    // Webhook URL - get it by creating a incoming webhook at https://my.slack.com/services/new/incoming-webhook/
+    // Webhook URL - get it by creating a incoming webhook 
+    // at https://my.slack.com/services/new/incoming-webhook/
     'webhook'        => '',
+    
+    // Enable notifications for entries that is disabled
     'notifyDisabled' => false,
 
     // Username
