@@ -17,8 +17,8 @@ class SlackNotificationsVariable
 {
     /**
      */
-    public function exampleVariable($optional = null)
+    public function send($text = '')
     {
-        return "And away we go to the Twig template...";
+        return craft()->slackNotifications->send($text);
     }
 }

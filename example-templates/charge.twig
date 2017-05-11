@@ -1,0 +1,2 @@
+{% set payment = model.payments[0] ?? null %}
+Someone bought {{ model.meta.title }}, wohoo! We got {{ payment.amountFormatted }}! Caching. {{ payment.stripeLink }}
