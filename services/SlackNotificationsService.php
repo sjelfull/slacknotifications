@@ -15,10 +15,7 @@ namespace Craft;
 
 class SlackNotificationsService extends BaseApplicationComponent
 {
-    protected $settings;
     protected $slackUri;
-    protected $entryUri;
-    protected $sectionName;
     protected $oldTemplatePath;
     protected $notifications;
     protected $notifyDisabled;
@@ -27,7 +24,6 @@ class SlackNotificationsService extends BaseApplicationComponent
     {
         parent::init();
 
-        //$this->settings       = craft()->plugins->getPlugin('slacknotifications')->getSettings();
         $this->slackUri       = craft()->config->get('webhook', 'slacknotifications');
         $this->notifications  = craft()->config->get('notifications', 'slacknotifications');
         $this->notifyDisabled = craft()->config->get('notifyDisabled', 'slacknotifications');
