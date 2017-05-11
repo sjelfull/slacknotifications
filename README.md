@@ -14,22 +14,12 @@ To install Slack Notifications, follow these steps:
 
 Slack Notifications works on Craft 2.4.x and Craft 2.5.x.
 
-## Slack Notifications Overview
-
--Insert text here-
-
 ## Configuring Slack Notifications
 
--Insert text here-
+First, setup a [Incoming Webhook](https://my.slack.com/services/new/incoming-webhook/).
 
-## Using Slack Notifications
+Then, copy the example config file `slacknotifications.php` into your config directory, usually `craft/config`.
 
--Insert text here-
-
-## Slack Notifications Roadmap
-
-Some things to do, and ideas for potential features:
-
-* Release it
+Then, modify your config and add your events.
 
 Brought to you by [Superbig](https://superbig.co)

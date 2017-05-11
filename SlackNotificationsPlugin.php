@@ -94,46 +94,12 @@ class SlackNotificationsPlugin extends BasePlugin
      */
     protected function defineSettings ()
     {
-        return array(
-            'webhook'        => array( AttributeType::String, 'label' => 'Slack webhook', 'default' => '' ),
-            'notifyDisabled' => array( AttributeType::Bool, 'label' => 'Notify on disabled entries', 'default' => false ),
-        );
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSettingsHtml ()
-    {
-        return craft()->templates->render('slacknotifications/SlackNotifications_Settings', array(
-            'settings' => $this->getSettings()
-        ));
+        return [];
     }
 
     private function registerEvents ()
     {
-        $sectionHandles = [ 'pluginNotifications' => 'types/_plugin-signup' ];
-
-        craft()->on('entries.SaveEntry', function (Event $event) use ($sectionHandles) {
-            $disabledEntries = $this->getSettings()['notifyDisabled'];
-            $entry           = $event->params['entry'];
-
-            if ( !$disabledEntries && $entry->status == 'disabled' ) {
-                return;
-            }
-
-            $sectionHandle = $entry->section->handle;
-
-            if ( array_key_exists($sectionHandle, $sectionHandles) ) {
-                $template = $sectionHandles[ $sectionHandle ];
-                craft()->slackNotifications->notifyOnEntry($entry, $template);
-            }
-        });
-
-        craft()->on('charge.onCharge', function (Event $event) {
-            $model = $event->params['charge'];
-            craft()->slackNotifications->notifyOnCharge($model);
-        });
+        craft()->slackNotifications->registerEvents();
     }
 
 }
